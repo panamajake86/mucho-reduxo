@@ -25,3 +25,7 @@ AUTHENTICATION REQUIRED
 /chapter/{id}
 
 LOTR API Token: 31rkX6UJLAHpQUT3cUZa
+
+I don't know how to use Auth with axios.  I looked up some stuff online and found the following in stackOverflow:
+const header = `Authorization: Bearer ${token}`;
+return axios.get(URLConstants.USER_URL, { headers: { header } });

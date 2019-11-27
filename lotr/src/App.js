@@ -1,10 +1,29 @@
 import React from 'react';
 import tree from './images/tree.png';
 import './App.css';
+import axios from 'axios';
+
+
 
 function App() {
+
+  const header = `31rkX6UJLAHpQUT3cUZa`;
+
+  React.useEffect(() => {
+    axios
+      .get('https://the-one-api.herokuapp.com/v1/quote', {
+        headers: {
+          Authorization: `Bearer ${header}`,
+        },
+      })
+      .then(res => console.log(res.data.docs[1749].dialog))
+      .catch(err => console.log(err))
+  }, [])
+  
   return (
-    <div className="App">
+    
+    < div className = "App" >
+      
       <header className="App-header">
         <img src={tree} className="App-logo" alt="logo" />
         <p>
@@ -19,7 +38,7 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </div >
   );
 }
 
