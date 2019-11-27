@@ -1,14 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import tree from './images/tree.png';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={tree} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Fuck bitches, get money.
         </p>
         <a
           className="App-link"
